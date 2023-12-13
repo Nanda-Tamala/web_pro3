@@ -9,9 +9,7 @@
         <form action="<?= base_url('matakuliah/cetak'); ?>" method="post">
             <table>
                 <tr>
-                    <th colspan="3">
-                        Form Input Data Mata Kuliah
-                    </th>
+                    <th colspan="3"> Form Input Data Mata Kuliah </th>
                 </tr>
                 <tr>
                     <td colspan="3">
@@ -22,29 +20,30 @@
                     <th>Kode MTK</th>
                     <th>:</th>
                     <td>
-                        <input type="text" name="kode" id="kode" placeholder="Required">
+                        <input type="text" name="kode" id="kode">
+                        <?= form_error('kode', '<small class="text-danger pl-3">', '</small>') ?>
                     </td>
                 </tr>
-                <?= form_error('kode'); ?>
                 <tr>
                     <th>Nama MTK</th>
                     <td>:</td>
                     <td>
-                        <input type="text" name="nama" id="nama" placeholder="Required">
+                        <input type="text" name="nama" id="nama">
+                        <?= form_error('nama', '<small class="text-danger pl-3">', '</small>') ?>
                     </td>
+
+
+
                 </tr>
-                <?= form_error('nama'); ?>
                 <tr>
                     <th>SKS</th>
                     <td>:</td>
-                    <td>
-                        <select name="sks" id="sks">
+                    <td> <select name="sks" id="sks">
                             <option value="">Pilih SKS</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
-                        </select>
-                    </td>
+                        </select> </td>
                 </tr>
                 <tr>
                     <td colspan="3" align="center">
